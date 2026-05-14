@@ -7,6 +7,9 @@ Drop the ``Editor`` folder into the Assets folder of your project
 ## The Problem 
 The **problem** is that the Gorilla Tag SDK is hardcoded to look for assetbundles ending in ``_Win64`` and ``_Android``, despite the fact that they export as ``_win64`` and ``_android`` on Unix-likes.
 
+## WARNING
+I have moved this repository to Codeberg. This version will be archived and never get updates. For more updates, please go to https://codeberg.org/VRBlueGT/GTUnixSDKPatchVRBlueFork.
+
 This is fine in Windows land, because Windows' file system, NTFS, is case insensitive. This means that ``file``, ``fIlE``, ``FILE``, so on and so forth are all treated as the same filename and cannot coexist.
 
 This is **not** the case on virtually all Unix-like filesystems, such as Ext4 and Btrfs, so when the SDK tries to zip up the assetbundles it built, it cannot find them.
